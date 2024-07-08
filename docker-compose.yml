@@ -1,0 +1,15 @@
+services:
+  qemu:
+    container_name: qemu
+    image: qemux/qemu-docker
+    environment:
+      BOOT: "https://download.fedoraproject.org/pub/fedora/linux/releases/40/Spins/x86_64/iso/Fedora-KDE-Live-x86_64-40-1.14.iso"
+      DISK_SIZE: "18G"
+      RAM_SIZE: "4G"
+    devices:
+      - /dev/kvm
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 8006:8006
+    stop_grace_period: 2m

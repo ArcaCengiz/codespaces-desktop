@@ -1,3 +1,12 @@
 # codespaces-desktop
-websockify --web=/usr/share/novnc/ 6080 localhost:5900
-sudo qemu-system-x86_64 -enable-kvm -cdrom ubuntu.iso -boot menu=on -drive file=Image.img -m 46 -cpu host -vga virtio -display vnc=127.0.0.1:0
+## Instructions
+1. `docker compose up`
+1. Perform install
+1. Delete line `BOOT: ...` from `docker-compose.yml`
+
+## Usage
+Perform install when running for the first time, then run
+``` bash
+docker compose up
+```
+to start the VM.
